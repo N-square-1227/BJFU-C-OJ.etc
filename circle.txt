@@ -1,0 +1,33 @@
+
+
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+using namespace std;
+
+const double PI = acos(-1.0);
+class Circle {
+private:
+	double r;
+	double s;
+public:
+	void setr(double xr)
+	{
+		r = xr;
+	}
+	void calcu(){
+		s = PI * r * r;
+	}
+	void gets() {
+		cout <<setiosflags(ios::fixed)<<setprecision(2)<<s << endl;
+	}
+};
+int main() {
+	double r;
+	Circle circle;
+	cin >> r;
+	circle.setr(r);
+	circle.calcu();
+	circle.gets();
+	return 0;
+}
